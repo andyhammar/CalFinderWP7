@@ -25,6 +25,11 @@ namespace CalFinderWP7.App
             this.Loaded += new RoutedEventHandler(MainPage_Loaded);
         }
 
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+        }
+
         // Handle selection changed on ListBox
         private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -42,6 +47,7 @@ namespace CalFinderWP7.App
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
+            _searchTextBox.Focus();
             if (!App.ViewModel.IsDataLoaded)
             {
                 App.ViewModel.LoadData();
