@@ -68,5 +68,14 @@ namespace CalFinderWP7.App.Resources {
                 return ResourceManager.GetString("AppTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to all day.
+        /// </summary>
+        internal static string IsAllDayText {
+            get {
+                return ResourceManager.GetString("IsAllDayText", resourceCulture);
+            }
+        }
     }
 }

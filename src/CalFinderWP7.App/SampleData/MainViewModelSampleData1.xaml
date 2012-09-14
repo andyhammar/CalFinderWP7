@@ -15,7 +15,7 @@
 				<Microsoft_Phone_UserData:Attendee DisplayName="Pfeiffer, Michael" EmailAddress="Congue habitasse nisi"/>
 			</Microsoft_Phone_UserData:Appointment.Organizer>
 		</Microsoft_Phone_UserData:Appointment>
-		<Microsoft_Phone_UserData:Appointment Details="Vel egestas" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Adipiscing nam fames tincidunt" Subject="Adventure Works" StartTime="09/15/2012 00:14:32" Status="OutOfOffice">
+		<Microsoft_Phone_UserData:Appointment Details="Vel egestas" EndTime="09/15/2012 00:14:32" IsAllDayEvent="False" IsPrivate="False" Location="Adipiscing nam fames tincidunt" Subject="Adventure Works" StartTime="09/15/2012 00:14:32" Status="OutOfOffice">
 			<Microsoft_Phone_UserData:Appointment.Attendees>
 				<Microsoft_Phone_UserData:Attendee DisplayName="Philips, Carol" EmailAddress="Blandit vestibulum"/>
 				<Microsoft_Phone_UserData:Attendee DisplayName="Poe, Toni" EmailAddress="Sed imperdiet dictum orci nulla"/>
