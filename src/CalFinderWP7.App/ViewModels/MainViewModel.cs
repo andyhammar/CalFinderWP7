@@ -106,19 +106,21 @@ namespace CalFinderWP7.App
             Appointments.Clear();
             var appointments = new Appointments();
             appointments.SearchCompleted += new EventHandler<AppointmentsSearchEventArgs>(appointments_SearchCompleted);
-            appointments.SearchAsync(DateTime.Now, DateTime.Now.AddYears(1), null);
+            appointments.SearchAsync(DateTime.Now, DateTime.Now.AddYears(1), term);
         }
 
         void appointments_SearchCompleted(object sender, AppointmentsSearchEventArgs e)
         {
-            foreach(var ap in e.Results)
+            var searchTerm = e.State as string;
+            searchTerm = searchTerm.ToUpperInvariant();
+            foreach (var ap in e.Results)
             {
+                if (!ap.Matches(searchTerm)) continue;
                 Appointments.Add(ap);
             }
         }
 
         public ObservableCollection<Appointment> Appointments { get; set; }
     }
-
 
 }
