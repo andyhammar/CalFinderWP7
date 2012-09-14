@@ -72,6 +72,14 @@ namespace CalFinderWP7.App
             //load previous searches
         }
 
+        public bool IsBusy
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(BusyText);
+            }
+        }
+
         public string BusyText
         {
             get
@@ -84,6 +92,7 @@ namespace CalFinderWP7.App
                 {
                     _busyText = value;
                     NotifyPropertyChanged("BusyText");
+                    NotifyPropertyChanged("IsBusy");
                 }
             }
         }

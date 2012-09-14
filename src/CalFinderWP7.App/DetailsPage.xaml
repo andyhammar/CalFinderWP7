@@ -10,7 +10,13 @@
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     SupportedOrientations="Portrait"  Orientation="Portrait" 
     shell:SystemTray.IsVisible="True">
-	<phone:PhoneApplicationPage.Resources>
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator 
+            IsIndeterminate="{Binding IsBusy}" 
+            IsVisible="{Binding IsBusy}" 
+            />
+    </shell:SystemTray.ProgressIndicator>
+    <phone:PhoneApplicationPage.Resources>
 		<CalFinderWP7_App_Converters:IsAllDayToTextConverter x:Key="IsAllDayToTextConverter"/>
 		<DataTemplate x:Key="AppointmentTemplate">
 			<Grid Margin="12,0,12,24">
