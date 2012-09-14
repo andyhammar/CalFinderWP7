@@ -24,7 +24,7 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="CALFINDER" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBox Height="71" Name="textBox1" Text="TextBox" Width="460" />
+            <TextBox Height="71" Name="_searchTextBox" Text="TextBox" Width="460" KeyUp="textBox1_KeyUp" />
         </StackPanel>
 
         <!--ContentPanel contains ListBox and ListBox ItemTemplate. Place additional content here-->

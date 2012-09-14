@@ -47,5 +47,18 @@ namespace CalFinderWP7.App
                 App.ViewModel.LoadData();
             }
         }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                LaunchSearch();
+            }
+        }
+
+        private void LaunchSearch()
+        {
+            App.ViewModel.Search(_searchTextBox.Text);
+        }
     }
 }
