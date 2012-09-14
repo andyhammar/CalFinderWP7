@@ -120,6 +120,9 @@
   <data name="AppTitle" xml:space="preserve">
     <value>CALFINDER</value>
   </data>
+  <data name="BusyText" xml:space="preserve">
+    <value>searching...</value>
+  </data>
   <data name="IsAllDayText" xml:space="preserve">
     <value>all day</value>
   </data>

@@ -70,6 +70,15 @@ namespace CalFinderWP7.App.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to searching....
+        /// </summary>
+        internal static string BusyText {
+            get {
+                return ResourceManager.GetString("BusyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to all day.
         /// </summary>
         internal static string IsAllDayText {

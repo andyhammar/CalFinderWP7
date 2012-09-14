@@ -7,7 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:CalFinderWP7_App_Converters="clr-namespace:CalFinderWP7.App.Converters" 
     x:Class="CalFinderWP7.App.DetailsPage"
-    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     SupportedOrientations="Portrait"  Orientation="Portrait" 
     shell:SystemTray.IsVisible="True">
@@ -114,6 +113,7 @@
         <!--ContentPanel contains details text. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData1.xaml}">
             <ListBox VerticalAlignment="Top" ItemTemplate="{StaticResource AppointmentTemplate}" ItemsSource="{Binding Appointments}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" HorizontalContentAlignment="Stretch"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding BusyText}" VerticalAlignment="Top" Style="{StaticResource PhoneTextSubtleStyle}" FontSize="24"/>
         </Grid>
     </Grid>
 

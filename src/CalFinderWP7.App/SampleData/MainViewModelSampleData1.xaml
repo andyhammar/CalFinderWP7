@@ -1,4 +1,7 @@
-﻿<CalFinderWP7_App:MainViewModel xmlns:CalFinderWP7_App="clr-namespace:CalFinderWP7.App" xmlns:Microsoft_Phone_UserData="clr-namespace:Microsoft.Phone.UserData;assembly=Microsoft.Phone" IsDataLoaded="True" SampleProperty="Gravida rutrum">
+﻿<CalFinderWP7_App:MainViewModel 
+xmlns:CalFinderWP7_App="clr-namespace:CalFinderWP7.App" 
+xmlns:Microsoft_Phone_UserData="clr-namespace:Microsoft.Phone.UserData;assembly=Microsoft.Phone" IsDataLoaded="True" 
+BusyText="looking for stuff...">
 	<CalFinderWP7_App:MainViewModel.Appointments>
 		<Microsoft_Phone_UserData:Appointment Details="Etiam fermentum aptent interdum eros" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Fusce nibh hac fringilla" Subject="A. Datum Corporation" StartTime="09/15/2012 00:14:32" Status="Busy">
 			<Microsoft_Phone_UserData:Appointment.Attendees>
@@ -151,16 +154,4 @@
 			</Microsoft_Phone_UserData:Appointment.Organizer>
 		</Microsoft_Phone_UserData:Appointment>
 	</CalFinderWP7_App:MainViewModel.Appointments>
-	<CalFinderWP7_App:MainViewModel.Items>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Arcu ultricies diam lectus venenatis" LineOne="Dictum sagittis per vivamus" LineThree="Vestibulum adipiscing tristique"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Curabitur sed parturient sem sit" LineOne="Risus vulputate" LineThree="Senectus sociosqu suscipit"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Consequat vitae blandit" LineOne="Phasellus eget velit vel aliquam" LineThree="Elit aliquet"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Ligula vestibulum adipiscing" LineOne="Enim commodo libero" LineThree="Nam vestibulum erat class"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Eros luctus fusce magnis vestibulum" LineOne="Convallis litora curae torquent parturient" LineThree="Vestibulum donec conubia sed etiam"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Adipiscing facilisis fermentum" LineOne="Dignissim lorem elementum mattis" LineThree="Ultrices cubilia"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Maecenas parturient dis morbi" LineOne="Vehicula fringilla" LineThree="Mauris dapibus volutpat egestas mollis"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Nostra himenaeos" LineOne="Montes vestibulum praesent nibh" LineThree="Accumsan habitasse est hendrerit hac"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Proin malesuada feugiat ornare" LineOne="Nisi leo mus nec imperdiet" LineThree="Euismod non nulla"/>
-		<CalFinderWP7_App:ItemViewModel LineTwo="Primis tincidunt" LineOne="Vestibulum nisl platea" LineThree="Penatibus porttitor"/>
-	</CalFinderWP7_App:MainViewModel.Items>
 </CalFinderWP7_App:MainViewModel>
