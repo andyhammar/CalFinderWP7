@@ -1,0 +1,166 @@
+﻿<CalFinderWP7_App:MainViewModel xmlns:CalFinderWP7_App="clr-namespace:CalFinderWP7.App" xmlns:Microsoft_Phone_UserData="clr-namespace:Microsoft.Phone.UserData;assembly=Microsoft.Phone" IsDataLoaded="True" SampleProperty="Gravida rutrum">
+	<CalFinderWP7_App:MainViewModel.Appointments>
+		<Microsoft_Phone_UserData:Appointment Details="Etiam fermentum aptent interdum eros" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Fusce nibh hac fringilla" Subject="A. Datum Corporation" StartTime="09/15/2012 00:14:32" Status="Busy">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Aaberg, Jesper" EmailAddress="Duis consequat class nunc amet"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Adams, Ellen" EmailAddress="Aenean bibendum"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Adams, Terry" EmailAddress="Diam mauris quisque dignissim elementum"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Adams, Terry" EmailAddress="Eleifend facilisi faucibus est"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Penor, Lori" EmailAddress="Aliquam enim inceptos erat"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="WindowsLive" Name="someone@example.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Pfeiffer, Michael" EmailAddress="Congue habitasse nisi"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Vel egestas" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Adipiscing nam fames tincidunt" Subject="Adventure Works" StartTime="09/15/2012 00:14:32" Status="OutOfOffice">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Philips, Carol" EmailAddress="Blandit vestibulum"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Poe, Toni" EmailAddress="Sed imperdiet dictum orci nulla"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Hicks, Cassie" EmailAddress="Parturient proin malesuada vestibulum conubia"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Argentiero, Luca" EmailAddress="Libero augue vestibulum"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Perry, Brian" EmailAddress="Dolor porttitor cubilia dapibus quis"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="Facebook" Name="user@adventure-works.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Ramos, Luciana" EmailAddress="Placerat ipsum dis tristique"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Vestibulum nostra" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Vulputate arcu rhoncus" Subject="Adventure Works" StartTime="09/15/2012 00:14:32" Status="Tentative">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Barber, David" EmailAddress="Magnis duis nunc lacus"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Jamison, Jay" EmailAddress="Lacinia ultricies venenatis"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Reid, Miles" EmailAddress="Adipiscing parturient vestibulum amet vestibulum"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Bowen, Eli" EmailAddress="Suscipit hac posuere"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Kane, John" EmailAddress="Ante parturient torquent pretium"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="WindowsLive" Name="someone@adventure-works.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Sarin, Raman" EmailAddress="Curabitur ornare leo massa ultrices"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Sit eros sociis vel" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Praesent taciti aliquet" Subject="Alpine Ski House" StartTime="09/15/2012 00:14:32" Status="Tentative">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Sato, Naoki" EmailAddress="Volutpat platea"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Silva, Alexandre" EmailAddress="Vivamus non netus"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Cook, Kevin" EmailAddress="Sed convallis nulla rutrum"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Li, Yuhong" EmailAddress="Adipiscing parturient sapien porta"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Strande, Amy" EmailAddress="Vestibulum erat velit"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="Facebook" Name="user@example.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Makovac, Zrinka" EmailAddress="Nibh nisi"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Himenaeos conubia cubilia turpis" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Dapibus varius per faucibus egestas" Subject="Baldwin Museum of Science" StartTime="09/15/2012 00:14:32" Status="Tentative">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Miller, Ben" EmailAddress="Odio facilisis"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Orton, Jon" EmailAddress="Eleifend fermentum tortor"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Zhang, Larry" EmailAddress="Vestibulum mus nec pede"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Gladkikh, Andrey" EmailAddress="Urna vestibulum non facilisi"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Meyer, April" EmailAddress="Etiam fusce lorem"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="Facebook" Name="user-2@fabrikam.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Clark, Molly" EmailAddress="Nulla sed aenean proin"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Auctor venenatis ipsum mus" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Nascetur justo aliquam" Subject="Blue Yonder Airlines" StartTime="09/15/2012 00:14:32" Status="Free">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Dellamore, Luca" EmailAddress="Gravida penatibus iaculis porttitor"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Aaberg, Jesper" EmailAddress="Vel lacinia"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Adams, Ellen" EmailAddress="Natoque nam sed lobortis tincidunt"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Adams, Terry" EmailAddress="Tristique nullam"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Adams, Terry" EmailAddress="Hac ultricies viverra leo felis"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="Outlook" Name="user-3@fabrikam.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Penor, Lori" EmailAddress="Curabitur pharetra nec phasellus ante"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Elementum porta vestibulum purus" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Risus est facilisis luctus" Subject="City Power &amp; Light" StartTime="09/15/2012 00:14:32" Status="Free">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Pfeiffer, Michael" EmailAddress="Congue magna"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Philips, Carol" EmailAddress="Adipiscing morbi"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Poe, Toni" EmailAddress="Sagittis consequat sit"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Hicks, Cassie" EmailAddress="Lectus senectus sed libero"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Argentiero, Luca" EmailAddress="Ligula litora dis nulla"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="Other" Name="user-4@fabrikam.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Perry, Brian" EmailAddress="Sociosqu aliquet fringilla"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Praesent nisl platea lorem porttitor" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Primis morbi nulla non nunc" Subject="Coho Vineyard" StartTime="09/15/2012 00:14:32" Status="OutOfOffice">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Ramos, Luciana" EmailAddress="Leo blandit mattis commodo mauris"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Barber, David" EmailAddress="Hendrerit eros"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Jamison, Jay" EmailAddress="Mollis curae imperdiet"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Reid, Miles" EmailAddress="Nostra mus penatibus nibh cubilia"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Bowen, Eli" EmailAddress="Ornare dapibus etiam fusce"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="Facebook" Name="user-5@fabrikam.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Kane, John" EmailAddress="Tincidunt egestas sapien proin accumsan"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Convallis pede justo rhoncus" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Adipiscing lacus dignissim vel" Subject="Coho Winery" StartTime="09/15/2012 00:14:32" Status="Busy">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Sarin, Raman" EmailAddress="Parturient augue sociis facilisi"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Sato, Naoki" EmailAddress="Sem vestibulum adipiscing parturient vestibulum"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Silva, Alexandre" EmailAddress="Orci laoreet natoque dolor sit"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Cook, Kevin" EmailAddress="Curabitur posuere tellus habitant"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Li, Yuhong" EmailAddress="Interdum pretium ipsum phasellus consequat"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="Other" Name="user-6@fabrikam.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Strande, Amy" EmailAddress="Lorem tempus"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+		<Microsoft_Phone_UserData:Appointment Details="Penatibus parturient porttitor nunc congue" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Tincidunt amet integer" Subject="Coho Vineyard &amp; Winery" StartTime="09/15/2012 00:14:32" Status="Tentative">
+			<Microsoft_Phone_UserData:Appointment.Attendees>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Makovac, Zrinka" EmailAddress="Fermentum varius hac"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Miller, Ben" EmailAddress="Magna sodales massa"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Orton, Jon" EmailAddress="Nascetur mauris nec nullam"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Zhang, Larry" EmailAddress="Morbi habitasse hendrerit cras neque"/>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Gladkikh, Andrey" EmailAddress="Aptent himenaeos auctor imperdiet malesuada"/>
+			</Microsoft_Phone_UserData:Appointment.Attendees>
+			<Microsoft_Phone_UserData:Appointment.Account>
+				<Microsoft_Phone_UserData:Account Kind="WindowsLive" Name="user-7@fabrikam.com"/>
+			</Microsoft_Phone_UserData:Appointment.Account>
+			<Microsoft_Phone_UserData:Appointment.Organizer>
+				<Microsoft_Phone_UserData:Attendee DisplayName="Meyer, April" EmailAddress="Ante placerat vestibulum netus pulvinar"/>
+			</Microsoft_Phone_UserData:Appointment.Organizer>
+		</Microsoft_Phone_UserData:Appointment>
+	</CalFinderWP7_App:MainViewModel.Appointments>
+	<CalFinderWP7_App:MainViewModel.Items>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Arcu ultricies diam lectus venenatis" LineOne="Dictum sagittis per vivamus" LineThree="Vestibulum adipiscing tristique"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Curabitur sed parturient sem sit" LineOne="Risus vulputate" LineThree="Senectus sociosqu suscipit"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Consequat vitae blandit" LineOne="Phasellus eget velit vel aliquam" LineThree="Elit aliquet"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Ligula vestibulum adipiscing" LineOne="Enim commodo libero" LineThree="Nam vestibulum erat class"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Eros luctus fusce magnis vestibulum" LineOne="Convallis litora curae torquent parturient" LineThree="Vestibulum donec conubia sed etiam"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Adipiscing facilisis fermentum" LineOne="Dignissim lorem elementum mattis" LineThree="Ultrices cubilia"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Maecenas parturient dis morbi" LineOne="Vehicula fringilla" LineThree="Mauris dapibus volutpat egestas mollis"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Nostra himenaeos" LineOne="Montes vestibulum praesent nibh" LineThree="Accumsan habitasse est hendrerit hac"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Proin malesuada feugiat ornare" LineOne="Nisi leo mus nec imperdiet" LineThree="Euismod non nulla"/>
+		<CalFinderWP7_App:ItemViewModel LineTwo="Primis tincidunt" LineOne="Vestibulum nisl platea" LineThree="Penatibus porttitor"/>
+	</CalFinderWP7_App:MainViewModel.Items>
+</CalFinderWP7_App:MainViewModel>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Microsoft.Phone.UserData;
+using CalFinderWP7.App.Helpers;
 
 
 namespace CalFinderWP7.App
@@ -105,7 +106,7 @@ namespace CalFinderWP7.App
             Appointments.Clear();
             var appointments = new Appointments();
             appointments.SearchCompleted += new EventHandler<AppointmentsSearchEventArgs>(appointments_SearchCompleted);
-            appointments.SearchAsync(DateTime.MinValue, DateTime.MaxValue, null);
+            appointments.SearchAsync(DateTime.Now, DateTime.Now.AddYears(1), null);
         }
 
         void appointments_SearchCompleted(object sender, AppointmentsSearchEventArgs e)
@@ -119,17 +120,5 @@ namespace CalFinderWP7.App
         public ObservableCollection<Appointment> Appointments { get; set; }
     }
 
-    public class Navigate
-    {
 
-        internal static void ToSearchResultPage()
-        {
-            NavigateToPage("DetailsPage");
-        }
-
-        private static void NavigateToPage(string pageName)
-        {
-            (Application.Current.RootVisual as Frame).Navigate(new Uri(string.Format("/{0}.xaml", pageName), UriKind.Relative));
-        }
-    }
 }
