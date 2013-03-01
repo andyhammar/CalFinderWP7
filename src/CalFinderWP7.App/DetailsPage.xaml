@@ -115,7 +115,7 @@
 	</phone:PhoneApplicationPage.Foreground>
 
     <!--Data context is set to sample data above and first item in sample data collection below and LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent" d:DataContext="{Binding Items[0]}">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource AppGradientBackgroundBrush}" d:DataContext="{Binding Items[0]}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -123,7 +123,7 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-        	<TextBlock x:Name="PageTitle" Text="CALFINDER" Style="{StaticResource PhoneTextNormalStyle}"/>
+        	<TextBlock x:Name="PageTitle" Text="CALENDAR SEARCH" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <!--ContentPanel contains details text. Place additional content here-->

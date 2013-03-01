@@ -106,7 +106,10 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Assets\logo-173.png" />
+    <Content Include="Assets\logo-200.png" />
+    <Content Include="Assets\logo-99.png" />
+    <Content Include="Assets\logo-tight-100-73.png" />
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
