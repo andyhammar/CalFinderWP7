@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -38,28 +39,56 @@ namespace CalFinderWP7.App
         internal void Search(string term)
         {
             if (string.IsNullOrEmpty(term)) return;
-            LaunchSearch(term);
+            Appointments.Clear();
+            _now = DateTime.Now;
+            LaunchSearch(term, _now, _now.AddMonths(1));
             Navigate.ToSearchResultPage();
         }
 
-        private void LaunchSearch(string term)
+        private void LaunchSearch(string term, DateTime startTimeInclusive, DateTime endTimeInclusive)
         {
-            Appointments.Clear();
-            BusyText = AppRes.BusyText;
+            StatusText = AppRes.BusyText;
+            IsBusy = true;
             var appointments = new Appointments();
-            appointments.SearchCompleted += new EventHandler<AppointmentsSearchEventArgs>(appointments_SearchCompleted);
-            appointments.SearchAsync(DateTime.Now, DateTime.Now.AddYears(1), term);
+            appointments.SearchCompleted += appointments_SearchCompleted;
+            appointments.SearchAsync(startTimeInclusive, endTimeInclusive, 1000, term);
         }
 
         void appointments_SearchCompleted(object sender, AppointmentsSearchEventArgs e)
         {
-            BusyText = null;
+            StatusText = null;
             var searchTerm = e.State as string;
+            if (searchTerm == null) { return; }
+
+            var wasLastSearch = false;
+            if (e.StartTimeInclusive == _now)
+            {
+                LaunchSearch(searchTerm, e.EndTimeInclusive, e.EndTimeInclusive.AddYears(1));
+            }
+            else
+            {
+                wasLastSearch = true;
+            }
+
             searchTerm = searchTerm.ToUpperInvariant();
             foreach (var ap in e.Results)
             {
                 if (!ap.Matches(searchTerm)) continue;
                 Appointments.Add(ap);
+            }
+            if (wasLastSearch)
+            {
+                IsBusy = false;
+                if (!Appointments.Any())
+                {
+                    StatusText = string.Format(AppRes.NothingFoundMessage_from_to,
+                                               Environment.NewLine + _now.ToSwedishTime(), 
+                                               e.EndTimeInclusive.ToSwedishTime());
+                }
+                else
+                {
+                    StatusText = null;
+                }
             }
         }
 
@@ -72,31 +101,43 @@ namespace CalFinderWP7.App
             //load previous searches
         }
 
+        public string StatusText
+        {
+            get
+            {
+                return _statusText;
+            }
+            set
+            {
+                if (value != _statusText)
+                {
+                    _statusText = value;
+                    NotifyPropertyChanged("StatusText");
+                }
+            }
+        }
+        private string _statusText;
+
         public bool IsBusy
         {
             get
             {
-                return !string.IsNullOrEmpty(BusyText);
-            }
-        }
-
-        public string BusyText
-        {
-            get
-            {
-                return _busyText;
+                return _isBusy;
             }
             set
             {
-                if (value != _busyText)
+                if (value != _isBusy)
                 {
-                    _busyText = value;
-                    NotifyPropertyChanged("BusyText");
+                    _isBusy = value;
                     NotifyPropertyChanged("IsBusy");
                 }
             }
         }
-        private string _busyText;
+        private bool _isBusy;
+
+        public string SearchInstruction { get { return AppRes.SearchInstruction; } }
+
+        private DateTime _now;
     }
 
 }

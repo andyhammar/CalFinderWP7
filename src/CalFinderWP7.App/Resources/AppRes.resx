@@ -118,12 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppTitle" xml:space="preserve">
-    <value>CALFINDER</value>
+    <value>CALENDAR SEARCH</value>
   </data>
   <data name="BusyText" xml:space="preserve">
     <value>searching...</value>
   </data>
   <data name="IsAllDayText" xml:space="preserve">
     <value>all day</value>
+  </data>
+  <data name="NothingFoundMessage_from_to" xml:space="preserve">
+    <value>Nothing found between {0} and {1}</value>
+  </data>
+  <data name="SearchInstruction" xml:space="preserve">
+    <value>type what you're looking for and hit return to search</value>
   </data>
 </root>

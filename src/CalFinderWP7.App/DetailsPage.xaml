@@ -18,6 +18,10 @@
     </shell:SystemTray.ProgressIndicator>
     <phone:PhoneApplicationPage.Resources>
 		<CalFinderWP7_App_Converters:IsAllDayToTextConverter x:Key="IsAllDayToTextConverter"/>
+		<Style x:Key="AppSmallSubtleStyle" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="16"/>
+			<Setter Property="Foreground" Value="{StaticResource PhoneSubtleBrush}"/>
+		</Style>
 		<DataTemplate x:Key="AppointmentTemplate">
 			<Grid Margin="12,0,12,24">
 				<Grid.ColumnDefinitions>
@@ -25,6 +29,9 @@
 					<ColumnDefinition Width="Auto"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
@@ -37,6 +44,9 @@
 					<TextBlock x:Name="time" Margin="0,0,0,-1" TextWrapping="Wrap" 
 						Text="{Binding StartTime, StringFormat=t}" VerticalAlignment="Bottom" Style="{StaticResource PhoneTextSubtleStyle}"/>
 				</StackPanel>
+				<TextBlock Text="{Binding Location}" VerticalAlignment="Top" Grid.Row="2" Grid.ColumnSpan="2" TextWrapping="Wrap" Style="{StaticResource AppSmallSubtleStyle}"/>
+				<TextBlock Text="{Binding Organizer.DisplayName}" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Style="{StaticResource AppSmallSubtleStyle}"/>
+				<TextBlock Text="{Binding Details}" VerticalAlignment="Top" Grid.Row="4" Grid.ColumnSpan="2" TextWrapping="Wrap" Style="{StaticResource AppSmallSubtleStyle}"/>
 			</Grid>
 		</DataTemplate>
 		<Style x:Key="ListBoxItemStyle1" TargetType="ListBoxItem">
@@ -119,7 +129,7 @@
         <!--ContentPanel contains details text. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData1.xaml}">
             <ListBox VerticalAlignment="Top" ItemTemplate="{StaticResource AppointmentTemplate}" ItemsSource="{Binding Appointments}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" HorizontalContentAlignment="Stretch"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding BusyText}" VerticalAlignment="Top" Style="{StaticResource PhoneTextSubtleStyle}" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding StatusText}" VerticalAlignment="Top" Style="{StaticResource PhoneTextSubtleStyle}" FontSize="24"/>
         </Grid>
     </Grid>
 
