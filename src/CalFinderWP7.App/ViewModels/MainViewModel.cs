@@ -47,7 +47,7 @@ namespace CalFinderWP7.App
 
         private void LaunchSearch(string term, DateTime startTimeInclusive, DateTime endTimeInclusive)
         {
-            StatusText = AppRes.BusyText;
+            StatusText = string.Format(AppRes.BusyText_searchTerm, term);
             IsBusy = true;
             var appointments = new Appointments();
             appointments.SearchCompleted += appointments_SearchCompleted;
@@ -70,10 +70,10 @@ namespace CalFinderWP7.App
                 wasLastSearch = true;
             }
 
-            searchTerm = searchTerm.ToUpperInvariant();
+            var searchTermUpper = searchTerm.ToUpperInvariant();
             foreach (var ap in e.Results)
             {
-                if (!ap.Matches(searchTerm)) continue;
+                if (!ap.Matches(searchTermUpper)) continue;
                 Appointments.Add(ap);
             }
             if (wasLastSearch)
@@ -81,9 +81,10 @@ namespace CalFinderWP7.App
                 IsBusy = false;
                 if (!Appointments.Any())
                 {
-                    StatusText = string.Format(AppRes.NothingFoundMessage_from_to,
-                                               Environment.NewLine + _now.ToSwedishTime(), 
-                                               e.EndTimeInclusive.ToSwedishTime());
+                    StatusText = string.Format(AppRes.NothingFoundMessage_searchTerm_from_to,
+                        searchTerm,
+                        _now.ToSwedishTime(), 
+                        e.EndTimeInclusive.ToSwedishTime());
                 }
                 else
                 {

@@ -128,7 +128,7 @@
 
         <!--ContentPanel contains details text. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData1.xaml}">
-            <ListBox VerticalAlignment="Top" ItemTemplate="{StaticResource AppointmentTemplate}" ItemsSource="{Binding Appointments}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" HorizontalContentAlignment="Stretch"/>
+            <ListBox VerticalAlignment="Top" ItemTemplate="{StaticResource AppointmentTemplate}" ItemsSource="{Binding Appointments}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" HorizontalContentAlignment="Stretch" SelectionChanged="ListBox_SelectionChanged_1"/>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding StatusText}" VerticalAlignment="Top" Style="{StaticResource PhoneTextSubtleStyle}" FontSize="24"/>
         </Grid>
     </Grid>

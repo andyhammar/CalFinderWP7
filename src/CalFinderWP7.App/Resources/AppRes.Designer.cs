@@ -70,11 +70,11 @@ namespace CalFinderWP7.App.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to searching....
+        ///   Looks up a localized string similar to searching for {0}....
         /// </summary>
-        internal static string BusyText {
+        internal static string BusyText_searchTerm {
             get {
-                return ResourceManager.GetString("BusyText", resourceCulture);
+                return ResourceManager.GetString("BusyText_searchTerm", resourceCulture);
             }
         }
         
@@ -88,16 +88,18 @@ namespace CalFinderWP7.App.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nothing found between {0} and {1}.
+        ///   Looks up a localized string similar to Nothing found for {0}
+        ///between {1} and {2}.
         /// </summary>
-        internal static string NothingFoundMessage_from_to {
+        internal static string NothingFoundMessage_searchTerm_from_to {
             get {
-                return ResourceManager.GetString("NothingFoundMessage_from_to", resourceCulture);
+                return ResourceManager.GetString("NothingFoundMessage_searchTerm_from_to", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to type what you&apos;re looking for and hit return to search.
+        ///   Looks up a localized string similar to type what you&apos;re looking for 
+        ///and hit return to search.
         /// </summary>
         internal static string SearchInstruction {
             get {
