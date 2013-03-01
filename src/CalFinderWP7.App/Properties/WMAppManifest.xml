@@ -1,21 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{1b7abf9a-0c5f-4c79-b1f3-55244357d9cc}" Title="CalFinder" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="CalFinderWP7.App author" Description="Sample description" Publisher="CalFinderWP7.App">
+  <App xmlns="" ProductID="{1b7abf9a-0c5f-4c79-b1f3-55244357d9cc}" Title="Calendar Search" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Andreas Hammar" Description="Search your calendar" Publisher="Andreas Hammar">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
-      <Capability Name="ID_CAP_GAMERSERVICES" />
-      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
-      <Capability Name="ID_CAP_IDENTITY_USER" />
-      <Capability Name="ID_CAP_LOCATION" />
-      <Capability Name="ID_CAP_MEDIALIB" />
-      <Capability Name="ID_CAP_MICROPHONE" />
-      <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_PHONEDIALER" />
-      <Capability Name="ID_CAP_PUSH_NOTIFICATION" />
-      <Capability Name="ID_CAP_SENSORS" />
-      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-      <Capability Name="ID_CAP_ISV_CAMERA" />
-      <Capability Name="ID_CAP_CONTACTS" />
       <Capability Name="ID_CAP_APPOINTMENTS" />
     </Capabilities>
     <Tasks>
@@ -26,7 +13,7 @@
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>CalFinder</Title>
+          <Title>Calendar Search</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>
