@@ -5,7 +5,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:CalFinderWP7_App_Converters="clr-namespace:CalFinderWP7.App.Converters" 
+    xmlns:calFinderWp7AppConverters="clr-namespace:CalFinderWP7.App.Converters" 
     x:Class="CalFinderWP7.App.DetailsPage"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     SupportedOrientations="Portrait"  Orientation="Portrait" 
@@ -20,7 +20,7 @@
             />
     </shell:SystemTray.ProgressIndicator>
     <phone:PhoneApplicationPage.Resources>
-		<CalFinderWP7_App_Converters:IsAllDayToTextConverter x:Key="IsAllDayToTextConverter"/>
+		<calFinderWp7AppConverters:IsAllDayToTextConverter x:Key="IsAllDayToTextConverter"/>
 		<Style x:Key="AppSmallSubtleStyle" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="16"/>
 			<Setter Property="Foreground" Value="{StaticResource PhoneSubtleBrush}"/>
@@ -114,7 +114,7 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,0">
-        	<TextBlock x:Name="PageTitle" Text="CALENDAR SEARCH" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="{Binding AppName}" Style="{StaticResource PhoneTextNormalStyle}"/>
         	<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding StatusText}" 
 			VerticalAlignment="Top" Style="{StaticResource PhoneTextSubtleStyle}" FontSize="24" />
         </StackPanel>

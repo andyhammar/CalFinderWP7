@@ -1,24 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Microsoft.Phone.UserData;
 using CalFinderWP7.App.Helpers;
 using CalFinderWP7.App.Resources;
 
-
-namespace CalFinderWP7.App
+namespace CalFinderWP7.App.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
@@ -26,6 +16,8 @@ namespace CalFinderWP7.App
         {
             Appointments = new ObservableCollection<Appointment>();
         }
+
+        public string AppName { get { return AppRes.AppTitle;  } }
 
         public bool LightThemeEnabled
         {

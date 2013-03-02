@@ -61,7 +61,7 @@ namespace CalFinderWP7.App.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CALENDAR SEARCH.
+        ///   Looks up a localized string similar to CALENDAR QUICK SEARCH.
         /// </summary>
         internal static string AppTitle {
             get {
