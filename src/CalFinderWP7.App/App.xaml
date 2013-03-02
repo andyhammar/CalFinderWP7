@@ -10,9 +10,9 @@
             <GradientStop Color="Black" Offset="1"/>
             <GradientStop Color="#FF2D2D2D"/>
         </RadialGradientBrush>
-        <RadialGradientBrush x:Key="AppLightGradientBackgroundBrush" GradientOrigin="1,1" RadiusX="1" RadiusY="1">
+        <RadialGradientBrush x:Key="AppLightGradientBackgroundBrush" GradientOrigin="1,1" RadiusX="1.5" RadiusY="0.7" Center="1,1">
             <GradientStop Color="White" Offset="1"/>
-            <GradientStop Color="#FFDADADA"/>
+            <GradientStop Color="#FF939393" Offset="0.011"/>
         </RadialGradientBrush>
     </Application.Resources>
 
