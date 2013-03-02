@@ -101,7 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\logo-173.png" />
-    <Content Include="Assets\logo-200.png" />
     <Content Include="Assets\logo-99.png" />
     <Content Include="Assets\logo-tight-50-37.png" />
   </ItemGroup>
