@@ -1,0 +1,7 @@
+Search your calendar - simple and quick!
+
+Lightweight, simple app that lets you search your calendar. Type what you're looking for and the app will search for any appointment matching the search term in title, details or location.
+
+Search is performed in two steps for faster results: first within a month, then within a year from that.
+
+Icon designed by iconoci, from The Noun Project.
