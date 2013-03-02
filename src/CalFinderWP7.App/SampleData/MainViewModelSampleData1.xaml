@@ -1,7 +1,8 @@
 ﻿<CalFinderWP7_App:MainViewModel 
 xmlns:CalFinderWP7_App="clr-namespace:CalFinderWP7.App" 
 xmlns:Microsoft_Phone_UserData="clr-namespace:Microsoft.Phone.UserData;assembly=Microsoft.Phone" IsDataLoaded="True" 
-StatusText="looking for stuff...">
+IsBusy="true"
+BusyText="looking...">
 	<CalFinderWP7_App:MainViewModel.Appointments>
 		<Microsoft_Phone_UserData:Appointment Details="Etiam fermentum aptent interdum eros" EndTime="09/15/2012 00:14:32" IsAllDayEvent="True" IsPrivate="False" Location="Fusce nibh hac fringilla" Subject="A. Datum Corporation" StartTime="09/15/2012 00:14:32" Status="Busy">
 			<Microsoft_Phone_UserData:Appointment.Attendees>

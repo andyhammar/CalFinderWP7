@@ -26,6 +26,27 @@ namespace CalFinderWP7.App
         {
             Appointments = new ObservableCollection<Appointment>();
         }
+
+        public bool LightThemeEnabled
+        {
+            get
+            {
+                return (Visibility)Application.Current.Resources["PhoneLightThemeVisibility"] == Visibility.Visible;
+            }
+        }
+
+        public Brush BackgroundBrush
+        {
+            get
+            {
+                if (App.ViewModel.LightThemeEnabled)
+                {
+                    return Application.Current.Resources["AppLightGradientBackgroundBrush"] as Brush;
+                }
+                return Application.Current.Resources["AppDarkGradientBackgroundBrush"] as Brush;
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)
         {
@@ -83,7 +104,7 @@ namespace CalFinderWP7.App
                 {
                     StatusText = string.Format(AppRes.NothingFoundMessage_searchTerm_from_to,
                         searchTerm,
-                        _now.ToSwedishTime(), 
+                        _now.ToSwedishTime(),
                         e.EndTimeInclusive.ToSwedishTime());
                 }
                 else

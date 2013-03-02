@@ -11,10 +11,12 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
-
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.BackgroundColor="Transparent"
+    shell:SystemTray.Opacity="0"
+	Background="{Binding BackgroundBrush}">
     <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot" Margin="0" Background="{StaticResource AppGradientBackgroundBrush}">
+    <Grid x:Name="LayoutRoot" Margin="0,30,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -24,7 +26,12 @@
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,12,28">
             <Grid Margin="12,0,12,0">
                 <TextBlock x:Name="ApplicationTitle" Text="CALENDAR SEARCH" Style="{StaticResource PhoneTextNormalStyle}" Margin="0"/>
-                <Image HorizontalAlignment="Right" Source="/Assets/logo-tight-100-73.png" Height="50"/>
+                <Border HorizontalAlignment="Right" Height="50" Width="37" Background="{StaticResource PhoneAccentBrush}">
+                	<Border.OpacityMask>
+                		<ImageBrush Stretch="None" ImageSource="/Assets/logo-tight-50-37.png"/>
+                	</Border.OpacityMask>
+                </Border>
+                    
             </Grid>
             <TextBox x:Name="_searchTextBox" KeyUp="textBox1_KeyUp" Margin="0" />
             <TextBlock x:Name="SearchInstruction" Text="{Binding SearchInstruction}" Style="{StaticResource PhoneTextSubtleStyle}"/>

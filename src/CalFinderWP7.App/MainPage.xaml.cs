@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using Microsoft.Phone.Controls;
 
 namespace CalFinderWP7.App
@@ -16,6 +17,7 @@ namespace CalFinderWP7.App
             // Set the data context of the listbox control to the sample data
             DataContext = App.ViewModel;
             Loaded += MainPage_Loaded;
+
         }
 
         // Handle selection changed on ListBox
