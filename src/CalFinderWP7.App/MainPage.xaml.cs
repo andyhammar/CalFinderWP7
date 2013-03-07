@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Net.NetworkInformation;
 
 namespace CalFinderWP7.App
 {
@@ -18,6 +19,7 @@ namespace CalFinderWP7.App
             DataContext = App.ViewModel;
             Loaded += MainPage_Loaded;
 
+            
         }
 
         // Handle selection changed on ListBox
@@ -50,6 +52,11 @@ namespace CalFinderWP7.App
             {
                 LaunchSearch();
             }
+        }
+
+        private void Button_Tap_1(object sender, GestureEventArgs e)
+        {
+            LaunchSearch();
         }
 
         private void LaunchSearch()
