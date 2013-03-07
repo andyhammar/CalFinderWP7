@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
@@ -17,7 +18,7 @@ namespace CalFinderWP7.App.ViewModels
             Appointments = new ObservableCollection<Appointment>();
         }
 
-        public string AppName { get { return AppRes.AppTitle;  } }
+        public string AppName { get { return AppRes.AppTitle; } }
 
         public bool LightThemeEnabled
         {
@@ -54,41 +55,81 @@ namespace CalFinderWP7.App.ViewModels
             if (string.IsNullOrEmpty(term)) return;
             Appointments.Clear();
             _now = DateTime.Now;
-            LaunchSearch(term, _now, _now.AddMonths(1));
+            _searchPeriods = new Dictionary<DateTime, DateTime>
+                {
+                    {_now, _now.AddMonths(1)},
+                    {_now.AddMonths(1), _now.AddYears(12)},
+                    {_now.AddMonths(-1), _now},
+                    {_now.AddMonths(-2), _now.AddMonths(-1)},
+                    {_now.AddMonths(-3), _now.AddMonths(-2)}
+                };
+
+            LaunchSearch(term);
             Navigate.ToSearchResultPage();
         }
 
-        private void LaunchSearch(string term, DateTime startTimeInclusive, DateTime endTimeInclusive)
+        private void LaunchSearch(string term)
         {
             StatusText = string.Format(AppRes.BusyText_searchTerm, term);
             IsBusy = true;
-            var appointments = new Appointments();
-            appointments.SearchCompleted += appointments_SearchCompleted;
-            appointments.SearchAsync(startTimeInclusive, endTimeInclusive, 1000, term);
+            _appointments = new Appointments();
+            _appointments.SearchCompleted += appointments_SearchCompleted;
+
+            var first = Pop();
+
+            LaunchSearchForPeriod(term, first.Key, first.Value);
+        }
+
+        private KeyValuePair<DateTime, DateTime> Pop()
+        {
+            var first = _searchPeriods.First();
+            _searchPeriods.Remove(first.Key);
+            return first;
+        }
+
+        private void LaunchSearchForPeriod(string term, DateTime from, DateTime to)
+        {
+            _appointments.SearchAsync(from, to, 1000, term);
         }
 
         void appointments_SearchCompleted(object sender, AppointmentsSearchEventArgs e)
         {
-            StatusText = null;
             var searchTerm = e.State as string;
             if (searchTerm == null) { return; }
 
+
+
             var wasLastSearch = false;
-            if (e.StartTimeInclusive == _now)
+            if (WasLastSearch())
             {
-                LaunchSearch(searchTerm, e.EndTimeInclusive, e.EndTimeInclusive.AddYears(1));
+                wasLastSearch = true;
             }
             else
             {
-                wasLastSearch = true;
+                var next = Pop();
+                var from = next.Key;
+                var to = next.Value;
+                LaunchSearchForPeriod(searchTerm, from, to);
             }
 
             var searchTermUpper = searchTerm.ToUpperInvariant();
             foreach (var ap in e.Results)
             {
                 if (!ap.Matches(searchTermUpper)) continue;
-                Appointments.Add(ap);
+
+                var firstNewerItem = Appointments.FirstOrDefault(x => x.StartTime > ap.StartTime);
+                if (firstNewerItem == null)
+                {
+                    Appointments.Add(ap);
+                }
+                else
+                {
+                    var index = Appointments.IndexOf(firstNewerItem);
+                    Appointments.Insert(index, ap);
+                }
+
             }
+
             if (wasLastSearch)
             {
                 IsBusy = false;
@@ -104,6 +145,11 @@ namespace CalFinderWP7.App.ViewModels
                     StatusText = null;
                 }
             }
+        }
+
+        private bool WasLastSearch()
+        {
+            return !_searchPeriods.Any();
         }
 
         public ObservableCollection<Appointment> Appointments { get; set; }
@@ -152,6 +198,8 @@ namespace CalFinderWP7.App.ViewModels
         public string SearchInstruction { get { return AppRes.SearchInstruction; } }
 
         private DateTime _now;
+        private Dictionary<DateTime, DateTime> _searchPeriods;
+        private Appointments _appointments;
     }
 
 }

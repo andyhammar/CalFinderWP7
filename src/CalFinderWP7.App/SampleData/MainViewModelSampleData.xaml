@@ -1,0 +1,154 @@
+﻿<ViewModels:MainViewModel xmlns:ViewModels="clr-namespace:CalFinderWP7.App.ViewModels" xmlns:UserData="clr-namespace:Microsoft.Phone.UserData;assembly=Microsoft.Phone" AppName="Curabitur nam phasellus consequat maecenas" BackgroundBrush="#FFAB2143" IsDataLoaded="False" IsBusy="True" LightThemeEnabled="True" SearchInstruction="Ligula parturient diam litora" StatusText="Eget vestibulum facilisis dis">
+	<ViewModels:MainViewModel.Appointments>
+		<UserData:Appointment Details="Arcu aliquam per" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Lectus hendrerit accumsan diam bibendum" Subject="A. Datum Corporation" StartTime="03/07/2013 07:27:02" Status="Free">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Dis convallis dignissim adipiscing est" EmailAddress="Aenean elementum class hac leo"/>
+				<UserData:Attendee DisplayName="Mauris nullam aptent parturient" EmailAddress="Praesent cras auctor duis curae"/>
+				<UserData:Attendee DisplayName="Nunc vestibulum" EmailAddress="Aliquam integer"/>
+				<UserData:Attendee DisplayName="Facilisis fermentum fringilla mus nec" EmailAddress="Congue vestibulum non donec quisque"/>
+				<UserData:Attendee DisplayName="Cursus etiam amet ante habitasse" EmailAddress="Vivamus dictum"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="WindowsLive" Name="Vestibulum sed"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Eget himenaeos fusce" EmailAddress="Dictumst lorem"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Dis nulla cubilia proin" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Est augue dapibus tristique" Subject="Adventure Works" StartTime="03/07/2013 07:27:02" Status="Busy">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Enim erat libero" EmailAddress="Imperdiet parturient eros"/>
+				<UserData:Attendee DisplayName="Vestibulum sem vestibulum sit facilisi" EmailAddress="Ligula adipiscing faucibus blandit"/>
+				<UserData:Attendee DisplayName="Malesuada vel" EmailAddress="Litora luctus nibh"/>
+				<UserData:Attendee DisplayName="Parturient nam" EmailAddress="Habitant magnis penatibus"/>
+				<UserData:Attendee DisplayName="Commodo conubia" EmailAddress="Mattis sed porttitor morbi tincidunt"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Other" Name="Aliquet elit adipiscing"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Egestas ultricies inceptos nisi hac" EmailAddress="Venenatis vestibulum euismod leo mauris"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Suscipit vel justo lacinia consequat" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Nam nostra lacus pede" Subject="Adventure Works" StartTime="03/07/2013 07:27:02" Status="OutOfOffice">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Non parturient" EmailAddress="Dolor nascetur gravida"/>
+				<UserData:Attendee DisplayName="Per nisl vulputate curabitur fames" EmailAddress="Pharetra nunc"/>
+				<UserData:Attendee DisplayName="Odio phasellus placerat" EmailAddress="Vestibulum iaculis pulvinar orci"/>
+				<UserData:Attendee DisplayName="Felis mollis ipsum" EmailAddress="Sed sagittis sem"/>
+				<UserData:Attendee DisplayName="Montes senectus" EmailAddress="Sit sociosqu"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Facebook" Name="Nec feugiat"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Sed torquent laoreet" EmailAddress="Ornare quam"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Morbi habitasse rhoncus hendrerit" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Dictumst neque" Subject="Alpine Ski House" StartTime="03/07/2013 07:27:02" Status="OutOfOffice">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Dignissim rutrum magna" EmailAddress="Elementum vehicula quis volutpat facilisis"/>
+				<UserData:Attendee DisplayName="Maecenas natoque urna sapien" EmailAddress="Cras duis"/>
+				<UserData:Attendee DisplayName="Nunc amet massa praesent" EmailAddress="Semper fermentum"/>
+				<UserData:Attendee DisplayName="Ante posuere sociis accumsan taciti" EmailAddress="Fringilla est arcu"/>
+				<UserData:Attendee DisplayName="Bibendum metus potenti pretium" EmailAddress="Vestibulum hac adipiscing"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Facebook" Name="Ultrices dis"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Eleifend sodales viverra parturient" EmailAddress="Netus nulla"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Phasellus vitae sed" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Nibh vestibulum vivamus consequat aliquam" Subject="Baldwin Museum of Science" StartTime="03/07/2013 07:27:02" Status="OutOfOffice">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Imperdiet eget" EmailAddress="Nec facilisi purus"/>
+				<UserData:Attendee DisplayName="Malesuada non aliquam per risus" EmailAddress="Sed integer tempor sem elit"/>
+				<UserData:Attendee DisplayName="Penatibus tempus" EmailAddress="Porttitor tincidunt tristique tortor quisque"/>
+				<UserData:Attendee DisplayName="Sit ultricies" EmailAddress="Venenatis enim turpis vulputate vel"/>
+				<UserData:Attendee DisplayName="Varius velit" EmailAddress="Curabitur erat nam eros"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Facebook" Name="Tellus vestibulum"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Class aliquet curae adipiscing" EmailAddress="Nisi dis nisl faucibus"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Nec dapibus proin" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Augue vestibulum" Subject="Blue Yonder Airlines" StartTime="03/07/2013 07:27:02" Status="Tentative">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Vestibulum nunc mauris" EmailAddress="Odio nullam habitant"/>
+				<UserData:Attendee DisplayName="Vestibulum lorem" EmailAddress="Aptent morbi adipiscing auctor commodo"/>
+				<UserData:Attendee DisplayName="Congue conubia" EmailAddress="Parturient orci inceptos vestibulum"/>
+				<UserData:Attendee DisplayName="Convallis pede cursus" EmailAddress="Nulla quam dignissim elementum interdum"/>
+				<UserData:Attendee DisplayName="Hac facilisis cubilia lobortis" EmailAddress="Fermentum nascetur leo mus"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="WindowsLive" Name="Est fusce"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Dolor fames adipiscing egestas felis" EmailAddress="Euismod pharetra ipsum"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Adipiscing sociosqu" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Parturient mauris" Subject="City Power &amp; Light" StartTime="03/07/2013 07:27:02" Status="Tentative">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Feugiat parturient quis" EmailAddress="Dictum pulvinar vestibulum vestibulum"/>
+				<UserData:Attendee DisplayName="Lectus habitasse sagittis" EmailAddress="Sed hendrerit"/>
+				<UserData:Attendee DisplayName="Gravida magna iaculis" EmailAddress="Massa himenaeos libero sem"/>
+				<UserData:Attendee DisplayName="Ligula adipiscing lacinia senectus parturient" EmailAddress="Urna cras litora luctus"/>
+				<UserData:Attendee DisplayName="Imperdiet duis vestibulum magnis metus" EmailAddress="Vestibulum laoreet sit mattis"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Facebook" Name="Lorem per"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Vestibulum vel vestibulum nunc suscipit" EmailAddress="Nam adipiscing amet torquent natoque"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Nibh semper vestibulum" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Neque sociis nisi praesent" Subject="Coho Vineyard" StartTime="03/07/2013 07:27:02" Status="Tentative">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Diam eget montes" EmailAddress="Posuere potenti pretium rhoncus"/>
+				<UserData:Attendee DisplayName="Penatibus sodales nostra viverra" EmailAddress="Porttitor ornare"/>
+				<UserData:Attendee DisplayName="Vestibulum vestibulum ultrices sed dis" EmailAddress="Adipiscing platea tincidunt vehicula aliquam"/>
+				<UserData:Attendee DisplayName="Est primis" EmailAddress="Elit enim volutpat rutrum"/>
+				<UserData:Attendee DisplayName="Erat sapien" EmailAddress="Tristique integer parturient eros maecenas"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Other" Name="Parturient arcu"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Nisl taciti hac ultricies" EmailAddress="Accumsan quisque"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Adipiscing conubia" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Parturient vitae quis" Subject="Coho Winery" StartTime="03/07/2013 07:27:02" Status="Free">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Eleifend netus leo nulla tempus" EmailAddress="Vestibulum porta tortor"/>
+				<UserData:Attendee DisplayName="Adipiscing venenatis orci turpis" EmailAddress="Facilisi pede"/>
+				<UserData:Attendee DisplayName="Aliquam faucibus" EmailAddress="Quam habitant parturient aliquet mus"/>
+				<UserData:Attendee DisplayName="Purus inceptos risus varius" EmailAddress="Aenean nec vulputate vestibulum curabitur"/>
+				<UserData:Attendee DisplayName="Interdum non blandit lobortis" EmailAddress="Per vestibulum velit commodo"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Other" Name="Dictumst odio tellus tempor vivamus"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Nascetur vestibulum class" EmailAddress="Vestibulum curae sed"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+		<UserData:Appointment Details="Ante vehicula" EndTime="03/07/2013 07:27:02" IsAllDayEvent="True" IsPrivate="False" Location="Arcu volutpat maecenas" Subject="Coho Vineyard &amp; Winery" StartTime="03/07/2013 07:27:02" Status="Busy">
+			<UserData:Appointment.Attendees>
+				<UserData:Attendee DisplayName="Donec pharetra" EmailAddress="Placerat adipiscing parturient"/>
+				<UserData:Attendee DisplayName="Consequat aptent auctor urna" EmailAddress="Cras duis"/>
+				<UserData:Attendee DisplayName="Vestibulum sem nunc pulvinar" EmailAddress="Etiam euismod sagittis congue"/>
+				<UserData:Attendee DisplayName="Senectus sociosqu" EmailAddress="Sit vel cursus"/>
+				<UserData:Attendee DisplayName="Nam dictum suscipit torquent" EmailAddress="Lectus amet sed feugiat ultrices"/>
+			</UserData:Appointment.Attendees>
+			<UserData:Appointment.Account>
+				<UserData:Account Kind="Other" Name="Egestas mauris phasellus nullam"/>
+			</UserData:Appointment.Account>
+			<UserData:Appointment.Organizer>
+				<UserData:Attendee DisplayName="Vestibulum convallis gravida" EmailAddress="Dignissim adipiscing"/>
+			</UserData:Appointment.Organizer>
+		</UserData:Appointment>
+	</ViewModels:MainViewModel.Appointments>
+</ViewModels:MainViewModel>

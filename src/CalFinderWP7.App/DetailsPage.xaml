@@ -12,7 +12,8 @@
     shell:SystemTray.IsVisible="True"
     shell:SystemTray.BackgroundColor="Transparent"
     shell:SystemTray.Opacity="0"
-	Background="{Binding BackgroundBrush}" >
+	Background="{Binding BackgroundBrush}" 
+	d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml, Instance={x:Null}}" >
     <shell:SystemTray.ProgressIndicator>
         <shell:ProgressIndicator 
             IsIndeterminate="{Binding IsBusy}" 
@@ -20,6 +21,8 @@
             />
     </shell:SystemTray.ProgressIndicator>
     <phone:PhoneApplicationPage.Resources>
+    	<calFinderWp7AppConverters:VisibilityInverterConverter x:Key="VisibilityInverterConverter"/>
+    	<calFinderWp7AppConverters:DateTimeToIsPastVisibilityConverter x:Key="DateTimeToIsPastCnverter"/>
 		<calFinderWp7AppConverters:IsAllDayToTextConverter x:Key="IsAllDayToTextConverter"/>
 		<Style x:Key="AppSmallSubtleStyle" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="16"/>
@@ -38,9 +41,12 @@
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="Auto"/>
 				</Grid.RowDefinitions>
-				<TextBlock x:Name="subject" Margin="0,0,18,0" Text="{Binding Subject}" VerticalAlignment="Top" d:LayoutOverrides="Width" Style="{StaticResource PhoneTextLargeStyle}"/>
+				<TextBlock x:Name="subject" Margin="0,0,18,0" Text="{Binding Subject}" VerticalAlignment="Top" d:LayoutOverrides="Width" Style="{StaticResource PhoneTextLargeStyle}" Visibility="{Binding Visibility, Converter={StaticResource VisibilityInverterConverter}, ElementName=subjectPast}"/>
 				<TextBlock x:Name="date" TextWrapping="Wrap" 
-					Text="{Binding StartTime, StringFormat=m}" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" Grid.Column="1" Margin="0,0,0,3"/>
+					Text="{Binding StartTime, StringFormat=m}" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" Grid.Column="1" Margin="0,0,0,3" Visibility="{Binding Visibility, Converter={StaticResource VisibilityInverterConverter}, ElementName=datePast}"/>
+				<TextBlock x:Name="subjectPast" Margin="0,0,18,0" Text="{Binding Subject}" VerticalAlignment="Top" d:LayoutOverrides="Width" Style="{StaticResource PhoneTextLargeStyle}" Visibility="{Binding StartTime, Converter={StaticResource DateTimeToIsPastCnverter}}" Foreground="{StaticResource PhoneSubtleBrush}"/>
+				<TextBlock x:Name="datePast" TextWrapping="Wrap" 
+					Text="{Binding StartTime, StringFormat=m}" VerticalAlignment="Bottom" d:LayoutOverrides="Width" HorizontalAlignment="Right" Grid.Column="1" Margin="0,0,0,3" Visibility="{Binding StartTime, Converter={StaticResource DateTimeToIsPastCnverter}}" Foreground="{StaticResource PhoneSubtleBrush}"/>
 				<TextBlock x:Name="account" Text="{Binding Account.Name}" d:LayoutOverrides="Width" HorizontalAlignment="Left" Grid.Row="1" Style="{StaticResource PhoneTextAccentStyle}" Margin="0,0,12,0" VerticalAlignment="Bottom"/>
 				<StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
 					<TextBlock x:Name="isAllDay" TextWrapping="Wrap" Text="{Binding IsAllDayEvent, Converter={StaticResource IsAllDayToTextConverter}}" VerticalAlignment="Top" Margin="0,0,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
@@ -106,7 +112,7 @@
 	</phone:PhoneApplicationPage.Foreground>
 
     <!--Data context is set to sample data above and first item in sample data collection below and LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot" d:DataContext="{Binding Items[0]}" Margin="0,30,0,0">
+    <Grid x:Name="LayoutRoot" Margin="0,30,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -120,7 +126,7 @@
         </StackPanel>
 
         <!--ContentPanel contains details text. Place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData1.xaml}">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" >
             <ListBox VerticalAlignment="Top" ItemTemplate="{StaticResource AppointmentTemplate}" ItemsSource="{Binding Appointments}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" HorizontalContentAlignment="Stretch" SelectionChanged="ListBox_SelectionChanged_1"/>
         </Grid>
     </Grid>

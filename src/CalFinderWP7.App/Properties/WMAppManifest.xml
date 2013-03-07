@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{1b7abf9a-0c5f-4c79-b1f3-55244357d9cc}" Title="Calendar Quick Search" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Andreas Hammar" Description="Search your calendar" Publisher="Andreas Hammar">
+  <App xmlns="" ProductID="{1b7abf9a-0c5f-4c79-b1f3-55244357d9cc}" Title="Calendar Quick Search" RuntimeType="Silverlight" Version="1.0.0.1" Genre="apps.normal" Author="Andreas Hammar" Description="Search your calendar" Publisher="Andreas Hammar">
     <IconPath IsRelative="true" IsResource="false">Assets\logo-99.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_APPOINTMENTS" />
